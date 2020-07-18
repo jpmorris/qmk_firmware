@@ -125,9 +125,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return true; //Process all other keycodes normally
     }
 }
-// DEFAULT COLOR
+
 void keyboard_post_init_user(void) {
+    // colors see: https://beta.docs.qmk.fm/using-qmk/hardware-features/lighting/feature_rgblight
   rgblight_enable_noeeprom(); // Enables RGB, without saving settings
-  rgblight_sethsv_noeeprom(HSV_WHITE);
+  rgblight_sethsv_noeeprom(HSV_TEAL);
   rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
 }

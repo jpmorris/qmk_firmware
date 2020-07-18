@@ -44,7 +44,11 @@
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #define RGB_MATRIX_KEYPRESSES         // reacts to keypresses
 // #define RGB_MATRIX_KEYRELEASES        // reacts to keyreleases (instead of keypresses)
-#define RGB_MATRIX_STARTUP_MODE RGBLIGHT_MODE_STATIC_LIGHT// Sets the default mode, if none has been set
+// setting this to:
+// 0 - off
+// 1 - static
+// see: https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effects
+#define RGB_MATRIX_STARTUP_MODE 1 // Sets the default mode, if none has been set
 // #define RGBLIGHT_HUE_STEP 12        // Units to step when in/decreasing hue
 // #define RGBLIGHT_SAT_STEP 25        // Units to step when in/decreasing saturation
 // #define RGBLIGHT_VAL_STEP 12        // Units to step when in/decreasing value (brightness)
@@ -64,7 +68,7 @@
 // #define RGBLIGHT_EFFECT_SNAKE           // Enable snake animation mode.
 // #define RGBLIGHT_EFFECT_STATIC_GRADIENT // Enable static gradient mode.
 
-// #define RGBLIGHT_EFFECT_BREATHE_CENTER              // If defined, used to calculate the curve for the breathing animation. Valid values are 1.0 to 2.7
+// #define RGBLIGHT_EFFECT_BREATHECENTER              // If defined, used to calculate the curve for the breathing animation. Valid values are 1.0 to 2.7
 // #define RGBLIGHT_EFFECT_BREATHE_MAX 255             // The maximum brightness for the breathing mode. Valid values are 1 to 255
 // #define RGBLIGHT_EFFECT_CHRISTMAS_INTERVAL 1000     // How long to wait between light changes for the "Christmas" animation, in milliseconds
 // #define RGBLIGHT_EFFECT_CHRISTMAS_STEP 2            // The number of LEDs to group the red/green colors by for the "Christmas" animation
@@ -77,7 +81,7 @@
 // This list in in the correct mode order. Next mode is the following line, previous mode is previous line. Loops around.
 // #define DISABLE_RGB_MATRIX_SOLID_COLOR                   // Static single hue, no speed support
 // #define DISABLE_RGB_MATRIX_ALPHAS_MODS                   // Static dual hue, speed is hue for secondary hue
-// #define DISABLE_RGB_MATRIX_GRADIENT_UP_DOWN              // Static grafhgresdfgdgfddfgfdgfdgfdsdgjklthisiwarejkalksdjfdsfient top to bottom, speed controls how much gradient changes
+// #define DISABLE_RGB_MATRIX_GRADIENT_UP_DOWN              // Static gradient top to bottom, speed controls how much gradient changes
 //#define DISABLE_RGB_MATRIX_BREATHING                     // Single hue brightness cycling animation
 //#define DISABLE_RGB_MATRIX_BAND_SAT                      // Single hue band fading saturation scrolling left to right
 //#define DISABLE_RGB_MATRIX_BAND_VAL                      // Single hue band fading brightness scrolling left to right

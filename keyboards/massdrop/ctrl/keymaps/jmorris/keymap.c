@@ -126,8 +126,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
 }
 
+void rgb_matrix_indicators_user(void) {
+    if (host_keyboard_led_state().caps_lock) {
+        rgb_matrix_set_color(33, RGB_RED);
+        rgb_matrix_set_color(34, RGB_RED);
+        rgb_matrix_set_color(50, RGB_RED);
+        rgb_matrix_set_color(51, RGB_RED);
+        rgb_matrix_set_color(63, RGB_RED);
+    }
+}
+
+
+
 void keyboard_post_init_user(void) {
     // colors see: https://beta.docs.qmk.fm/using-qmk/hardware-features/lighting/feature_rgblight
+  //debug_enable = true;
+  //debug_matrix = true;
   rgblight_enable_noeeprom(); // Enables RGB, without saving settings
   rgblight_sethsv_noeeprom(HSV_TEAL);
   rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);

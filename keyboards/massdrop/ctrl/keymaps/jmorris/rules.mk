@@ -1,3 +1,6 @@
+# project specific files
+#SRC += rgb_matrix_user.c
+
 # RGBLIGHT_ENABLE = no				# Not for MD boards. This is here in case you forget.
 COMMAND_ENABLE = yes				# Commands for debug and configuration
 # BOOTMAGIC_ENABLE = full			# Virtual DIP switch configuration
@@ -15,3 +18,4 @@ CONSOLE_ENABLE = yes			# Enable debugging console. Increases firmware size.
 # COMBO_ENABLE					# Key combo feature
 # LEADER_ENABLE					# Enable leader key chording
 #USB_LED_INDICATOR_ENABLE = yes
+
